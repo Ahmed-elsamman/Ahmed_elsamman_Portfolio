@@ -1,13 +1,33 @@
 :export { logoPrimary: var(--logo-primary); }
 
 .logo {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--logo-primary);
-  transition: all 0.3s ease-out 0s;
-  &:hover {
-    transform: scale(1.1);
+
+  animation: logo-animation 2s infinite;
+
+
+}
+
+//animation
+
+@keyframes logo-animation {
+  0% {
+    // transform: scale(1);
+    border-color: var(--logo-primary);
+    border-width: 2px;
+  }
+  50% {
+    // transform: scale(1.1);
+    border-color: var(--logo-primary);
+    border-width: 6px;
+  }
+  100% {
+    // transform: scale(1);
+    border-color: var(--logo-primary);
+    border-width: 2px;
   }
 }
