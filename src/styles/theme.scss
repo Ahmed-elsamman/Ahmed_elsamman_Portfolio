@@ -1,6 +1,6 @@
 .light {
   --txt: #000;
-  --txt-secondary: #F3C623;
+  --txt-secondary: #cc9707;
   --txt-sec-darker: #EB8317;
   --bg-layout-home: linear-gradient(307deg, transparent 0%, transparent 57%, #ffffff 57%, #f8f8f8 100%), linear-gradient(to bottom, #ffffff 0%, #f8f8f8 100%);
   --bg-home-section-main: none;
@@ -15,8 +15,10 @@
   --primary: #F3C623;
   --border-primary: #F3C623;
   --logo-primary: #F3C623;
-  --social-icon: #F3C623;
-  --social-shadow: #F3C623;
+  --social-icon: #5de2ec;
+  --social-icon-bg: #000000db;
+  --social-shadow: #222222;
+
   --preloader: #fafafa;
   --bg-modal: #fafafa;
   --modal-border: none;
@@ -46,7 +48,8 @@
   --primary: #F3C623;
   --border-primary: #F3C623;
   --logo-primary: #F3C623;
-  --social-icon: #F3C623;
+  --social-icon: #5de2ec;
+  --social-icon-bg: #06a1f5b4;
   --social-shadow: #EB8317;
   --preloader: black;
   --bg-modal: rgba(10, 10, 10, 0.9);

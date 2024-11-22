@@ -4,30 +4,30 @@ const AboutTextCard = () => {
   return (
     <div className={s.card}>
       <p style={{ textAlign: 'justify' }}>
-        Hi Everyone, I am{' '}
-        <span className={s.purple}>Snaichuk Volodymyr, </span>
-        <br />a software engineer currently based in{' '}
-        <span className={s.purple}>Krakow, Poland.</span>
+        Hello! I am Ahmed Elsamman,
+        <br />a passionate software engineer based in{' '}
+        <b className={s.purple}>Cairo, Egypt.</b>
         <br />
         <br />
-        I have a Bachelor's degree in Computer Science and
+        I have a Bachelor's degree in Computer Science and Information
+        Systems From October 6 University ,Egypt
         <br />
-        Master's degree in Project Management from Ternopil Academy.
+        <br />
+        I am a results-driven developer with a strong foundation in
+        modern web technologies and a keen eye for creating elegant
+        solutions to complex problems.
         <br />
         <br />
-        My hobbies beyond programming:
+        Beyond coding, I am passionate about:
       </p>
 
       <ul style={{ marginLeft: 14 }}>
+        <li className={s.aboutActivity}>- Playing Games</li>
+        <li className={s.aboutActivity}>- Reading</li>
         <li className={s.aboutActivity}>
-          - Playing Games
+          - Mentoring and knowledge sharing
         </li>
-        <li className={s.aboutActivity}>
-          - Reading
-        </li>
-        <li className={s.aboutActivity}>
-          - Travelling
-        </li>
+        <li className={s.aboutActivity}>- Traveling</li>
       </ul>
     </div>
   );

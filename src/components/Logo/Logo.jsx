@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { routes } from '../../routes/RootRoutes';
 import s from './Logo.module.scss';
-import logo from '../../assets/logo2.jpg';
+import logo from '../../assets/saman_logo.svg';
 
 const Logo = ({ className }) => {
   return (

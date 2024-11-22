@@ -5,6 +5,7 @@ import { FaTelegramPlane } from '@react-icons/all-files/fa/FaTelegramPlane';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Tilt from 'react-parallax-tilt';
 import avatar from '../../../assets/avatar.svg';
+import samman_logo from '../../../assets/saman_logo.svg';
 import s from './IntroSection.module.scss';
 
 const IntroSection = () => {
@@ -19,50 +20,70 @@ const IntroSection = () => {
 
           <div className={s.description}>
             <p>
-              I'm a React Native Developer with <b>3 years</b> of
-              experience <br />
-              creating mobile apps for the iOS, Android, and Web
-              platforms.
+              I'm a passionate <b>Full Stack Developer</b> with a
+              creative mindset and <br />a drive for building
+              exceptional digital experiences.
             </p>
 
             <p>
-              My skills include proficiency in{' '}
+              My expertise spans across{' '}
               <i>
                 <b className={s.purple}>
-                  TypeScript, React, React Native,
+                  Frontend Development, Backend Architecture, and
+                  Cloud Solutions
                 </b>
               </i>
               <br />
-              and other relevant technologies. I have experience in
-              integrating various <br />
-              third-party libraries, API integration, push
-              notifications and analytics.
+              transforming complex challenges into elegant,
+              user-centric applications.
             </p>
 
             <p>
-              My field of Interest's are building new
+              I specialize in crafting robust web applications using{' '}
               <i>
-                <b className={s.purple}> Technologies and Products</b>
+                <b className={s.purple}>
+                  React, Next.js, Angular, Node.js, Nest , and Modern
+                  Cloud Technologies
+                </b>
               </i>
+              <br />
+              while maintaining a keen eye for UI/UX design principles
+              and performance optimization.
+            </p>
+
+            <p>
+              My passion lies in{' '}
+              <i>
+                <b className={s.purple}>
+                  Innovation, Clean Architecture, and Scalable
+                  Solutions
+                </b>
+              </i>
+              <br />
+              always staying ahead of industry trends and best
+              practices.
             </p>
           </div>
         </div>
-
-        <Tilt trackOnWindow={true}>
-          <LazyLoadImage alt="avatar" effect="blur" src={avatar} />
-        </Tilt>
+        <div className={s.avatarContainer}>
+          <Tilt trackOnWindow={true}>
+            <LazyLoadImage
+              alt="avatar"
+              effect="blur"
+              src={samman_logo}
+              className={s.avatar}
+            />
+          </Tilt>
+        </div>
       </div>
 
       <div className={s.introSocial}>
         <h1>FIND ME ON</h1>
-        <p>
-          Feel free to <span className={s.purple}>connect </span>with
-          me
-        </p>
+        <p>Feel free to connect with me</p>
         <ul className={s.socialLinks}>
           <li className={s.socialLink}>
             <a
-              href="https://github.com/vsnaichuk"
+              href="https://github.com/Ahmed-elsamman"
               target="_blank"
               rel="noreferrer"
               className={s.socialIcon}
@@ -73,7 +94,7 @@ const IntroSection = () => {
           </li>
           <li className={s.socialLink}>
             <a
-              href="https://www.facebook.com/Snaychuk"
+              href="https://www.facebook.com/ahmed.elsamman.71"
               target="_blank"
               rel="noreferrer"
               className={s.socialIcon}
@@ -95,9 +116,8 @@ const IntroSection = () => {
           </li>
           <li className={s.socialLink}>
             <a
-              href="https://www.linkedin.com/in/volodymyr-snaichuk-74a389124/"
+              href="https://www.linkedin.com/in/ahmed-elsamman-599a2215b"
               target="_blank"
-              rel="noreferrer"
               className={s.socialIcon}
               aria-label="linkedin"
             >

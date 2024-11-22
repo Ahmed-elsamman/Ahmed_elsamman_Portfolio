@@ -12,6 +12,11 @@
 }
 
 .header {}
+.samanPic{
+
+  border-radius: 30%;
+  animation: samanPic 5s linear infinite;
+}
 
 .title {
   padding-left: .2rem;
@@ -26,6 +31,8 @@
   width: 48px;
   margin-top: -16px;
   margin-left: 8px;
+  filter: grayscale(100%);
+  border-radius: 50%;
 }
 
 .mainTitle {
@@ -94,5 +101,20 @@
     justify-content: center;
     padding-left: 24px;
     padding-bottom: 20px;
+  }
+}
+
+@keyframes samanPic {
+  0% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
   }
 }

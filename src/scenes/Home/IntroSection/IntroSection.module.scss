@@ -24,6 +24,7 @@
   .title {
     font-size: 2.6rem;
     text-align: center;
+    font-weight: 700;
   }
 
   .description {
@@ -82,12 +83,22 @@
   font-size: 1.5rem;
   line-height: 2rem;
   color: var(--social-icon);
-  background: hsla(0,0%,100%,.972);
+  background: var(--social-icon-bg);
   border-radius: 50%;
   transition: .5s;
 }
 
 .socialIcon:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 15px var(--social-shadow);
+  box-shadow: 0 0 20px var(--social-shadow);
+}
+
+// .avatarContainer {
+//   width: 150px;
+//   height: 150px;
+// }
+.avatar {
+  width: 320px;
+  height: 320px;
+  border-radius: 20%;
 }
