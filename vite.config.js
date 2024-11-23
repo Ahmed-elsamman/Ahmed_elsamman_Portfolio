@@ -9,4 +9,11 @@ export default defineConfig({
     open: true,
     port: 3000,
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        implementation: require('sass'),
+      },
+    },
+  },
 });
