@@ -4,6 +4,11 @@ import s from './About.module.scss';
 import AboutTextCard from './AboutTextCard/AboutTextCard';
 import GithubActivity from './GithubActivity/GithubActivity';
 import TechSkills from './TechSkills/TechSkills';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+import Logo2 from '../../assets/logo2.1.jpg';
+import protflio1 from '../../assets/protflioWebsite/protflio1.jpg';
+import protflio2 from '../../assets/protflioWebsite/protflio5.jpg';
 
 const About = () => {
   return (
@@ -18,7 +23,9 @@ const About = () => {
           </div>
 
           <div className={s.aboutImg}>
-            <img src={aboutPromoImg} alt="about" />
+            <LazyLoadImage src={Logo2} alt="about" />
+            <LazyLoadImage src={protflio1} alt="about" />
+            <LazyLoadImage src={protflio2} alt="about" />
           </div>
         </div>
 
@@ -26,13 +33,13 @@ const About = () => {
           My <b className={s.purple}>Skills</b>
         </h2>
         <TechSkills />
-        <a href="https://github.com/vsnaichuk">
+        {/* <a href="https://github.com/vsnaichuk">
           <h2 className={s.githubActivity}>
             My <b className={s.purple}>Coding</b> Journey
           </h2>
 
           <GithubActivity />
-        </a>
+        </a> */}
       </div>
     </BaseLayout>
   );

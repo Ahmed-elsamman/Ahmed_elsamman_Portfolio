@@ -8,14 +8,11 @@ const ProjectCard = ({ id, image, title, description }) => {
   return (
     <li className={s.card}>
       <div className={s.cardWrapper}>
-        <Link
-          to={`/project/${id}`}
-          state={{ background: location }}
-        >
+        <Link to={`/project/${id}`} state={{ background: location }}>
           <LazyLoadImage
-            alt="card-img"
+            alt={title}
             effect="blur"
-            src={image.src}
+            src={image.src[0]}
             width="100%"
             style={{ minHeight: '10rem' }}
             placeholderSrc={image.placeholderSrc}
