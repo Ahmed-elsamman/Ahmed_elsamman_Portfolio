@@ -1,7 +1,12 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
-Disallow: /private/
-Sitemap: https://ahmedelsammanportfolio.vercel.app/sitemap.xml
+Sitemap: https://your-domain.com/sitemap.xml
 
-# Crawl-delay: 10
+# Optimize crawling
+Crawl-delay: 10
+
+# Prevent crawling of certain paths
+Disallow: /private/
+Disallow: /admin/
+Disallow: /temp/
