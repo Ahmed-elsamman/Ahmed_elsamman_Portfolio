@@ -2,6 +2,7 @@ import { AiFillGithub } from '@react-icons/all-files/ai/AiFillGithub';
 import { FaFacebookSquare } from '@react-icons/all-files/fa/FaFacebookSquare';
 import { FaLinkedinIn } from '@react-icons/all-files/fa/FaLinkedinIn';
 import { FaTelegramPlane } from '@react-icons/all-files/fa/FaTelegramPlane';
+import { FaWhatsapp } from 'react-icons/fa';
 import s from './Footer.module.scss';
 
 const Footer = () => {
@@ -55,6 +56,16 @@ const Footer = () => {
                 aria-label="linkedin"
               >
                 <FaLinkedinIn />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://wa.me/201116123202"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="whatsapp"
+              >
+                <FaWhatsapp />
               </a>
             </li>
           </ul>

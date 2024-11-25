@@ -2,6 +2,7 @@ import { AiFillGithub } from '@react-icons/all-files/ai/AiFillGithub';
 import { FaFacebookSquare } from '@react-icons/all-files/fa/FaFacebookSquare';
 import { FaLinkedinIn } from '@react-icons/all-files/fa/FaLinkedinIn';
 import { FaTelegramPlane } from '@react-icons/all-files/fa/FaTelegramPlane';
+import { FaWhatsapp } from 'react-icons/fa';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Tilt from 'react-parallax-tilt';
 import avatar from '../../../assets/avatar.svg';
@@ -20,9 +21,9 @@ const IntroSection = () => {
 
           <div className={s.description}>
             <p>
-              I'm a passionate <b>Full Stack Developer</b> with a
-              creative mindset and <br />a drive for building
-              exceptional digital experiences.
+              I'm a <b>Full Stack Developer</b> with a creative
+              mindset and <br />a drive for building exceptional
+              digital experiences.
             </p>
 
             <p>
@@ -122,6 +123,17 @@ const IntroSection = () => {
               aria-label="linkedin"
             >
               <FaLinkedinIn />
+            </a>
+          </li>
+          <li className={s.socialLink}>
+            <a
+              href="https://wa.me/201116123202"
+              target="_blank"
+              rel="noreferrer"
+              className={s.socialIcon}
+              aria-label="whatsapp"
+            >
+              <FaWhatsapp />
             </a>
           </li>
         </ul>

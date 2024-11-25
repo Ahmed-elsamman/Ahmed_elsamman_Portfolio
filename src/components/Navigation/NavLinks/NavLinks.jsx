@@ -26,7 +26,13 @@ const Link = (props) => {
   const ref = useRef();
   usePreload(ref, props.scene);
   return (
-    <NavLink ref={ref} to={props.to} end={props.end}>
+    <NavLink
+      ref={ref}
+      to={props.to}
+      end={props.end}
+      title={`View ${props.name} Page`}
+      aria-label={`Navigate to ${props.name} section`}
+    >
       {props.icon || null}
       {props.name}
     </NavLink>

@@ -88,7 +88,7 @@
 
 .downloadButton {
   position: relative;
-  overflow: hidden;
+  overflow: visible !important;
   background: linear-gradient(45deg, #FFD700, #DAA520) !important;
   border: none !important;
   transition: all 0.3s ease;
@@ -120,7 +120,7 @@
 
   &.downloading {
     pointer-events: none;
-    animation: pulse 0.8s ease-in-out;
+    animation: buttonPulse 0.8s ease-in-out;
   }
 
   .downloadText, .filename {
@@ -128,38 +128,38 @@
   }
 }
 
-@keyframes pulse {
+@keyframes buttonPulse {
   0% {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.05);
+    transform: scale(1.1);
   }
   100% {
     transform: scale(1);
-  }
-}
-
-@keyframes sparkle {
-  0% {
-    transform: translate(0, 0) scale(1);
-    opacity: 1;
-    background: #ffd700;
-  }
-  100% {
-    transform: translate(var(--tx), var(--ty)) scale(0);
-    opacity: 0;
-    background: #ffa500;
   }
 }
 
 .sparkle {
   position: fixed;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+  width: 8px;
+  height: 8px;
   pointer-events: none;
-  animation: sparkle 0.8s ease-out forwards;
+  border-radius: 50%;
+  animation: sparkleAnimation 0.8s ease-out forwards;
+  background: linear-gradient(45deg, #FFD700, #DAA520);
+  z-index: 9999;
+}
+
+@keyframes sparkleAnimation {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--tx), var(--ty)) scale(0);
+    opacity: 0;
+  }
 }
 
 @media (max-width: 600px) {
