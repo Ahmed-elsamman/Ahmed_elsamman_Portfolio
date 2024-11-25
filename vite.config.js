@@ -11,11 +11,17 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          utils: ['./src/utils'],
         },
       },
     },
     target: ['es2015', 'edge88', 'firefox78', 'chrome87', 'safari13'],
     minify: 'terser',
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        implementation: 'sass',
+      },
+    },
   },
 });
