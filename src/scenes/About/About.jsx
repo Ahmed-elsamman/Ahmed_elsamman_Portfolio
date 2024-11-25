@@ -21,12 +21,12 @@ const About = () => {
             </h1>
             <AboutTextCard />
           </div>
-
+          {/* 
           <div className={s.aboutImg}>
             <LazyLoadImage src={Logo2} alt="about" />
             <LazyLoadImage src={protflio1} alt="about" />
             <LazyLoadImage src={protflio2} alt="about" />
-          </div>
+          </div> */}
         </div>
 
         <h2 className={s.skills}>
