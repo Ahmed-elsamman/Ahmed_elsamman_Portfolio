@@ -1,0 +1,135 @@
+.experience {
+  padding: 2rem 0;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    background: var(--txt-secondary);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+    opacity: 0.3;
+  }
+}
+
+.timelineItem {
+  padding: 1.5rem;
+  position: relative;
+  background: var(--bg-secondary);
+  border-radius: 15px;
+  width: calc(50% - 40px);
+  margin: 2rem 0;
+  
+  &:nth-child(odd) {
+    left: 0;
+    &::after {
+      left: 100%;
+      border-left-color: var(--bg-secondary);
+    }
+  }
+  
+  &:nth-child(even) {
+    left: 50%;
+    margin-left: 80px;
+    &::after {
+      right: 100%;
+      border-right-color: var(--bg-secondary);
+    }
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+  }
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(var(--primary-rgb), 0.15);
+    transition: all 0.3s ease;
+  }
+}
+
+.header {
+  margin-bottom: 1rem;
+  
+  h3 {
+    color: var(--txt);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.company {
+  color: var(--txt-secondary);
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.period {
+  color: var(--txt);
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.description {
+  color: var(--txt);
+  font-size: 1rem;
+  margin: 1rem 0;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.achievements {
+  list-style: none;
+  padding: 0;
+  
+  li {
+    color: var(--txt);
+    margin: 0.75rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+    
+    &::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: var(--txt-secondary);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline::after {
+    left: 31px;
+  }
+  
+  .timelineItem {
+    width: calc(100% - 80px);
+    margin-left: 80px;
+    
+    &:nth-child(even) {
+      left: 0;
+    }
+    
+    &::after {
+      left: -20px;
+      border-right-color: var(--bg-secondary);
+      border-left-color: transparent;
+    }
+  }
+}

@@ -35,13 +35,16 @@ const MainSection = () => {
       <div className={s.spacer} />
 
       <LazyLoadImage
-        alt="home-img"
+        alt="Ahmed Elsamman - Portfolio Image"
         effect="blur"
         src={saman_Pic}
         wrapperClassName={s.homeMainIcon}
         width="396"
         height="400"
         className={s.samanPic}
+        loading="lazy"
+        placeholderSrc={`${saman_Pic}?w=50`}
+        title="Ahmed Elsamman - Portfolio Image"
       />
     </section>
   );

@@ -5,7 +5,7 @@ import Button from '../../components/UIElements/Button/Button';
 import BaseLayout from '../../layouts/BaseLayout/BaseLayout';
 import s from './Resume.module.scss';
 import resumeImage from '../../assets/Samman_cv.jpg';
-import resumePDF from '../../../public/Ahmed_Elsamman_Software_Engineer.pdf';
+import resumePDF from '/Ahmed_Elsamman_Software_Engineer.pdf';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Resume = () => {
@@ -38,12 +38,13 @@ const Resume = () => {
     setTimeout(() => button.classList.remove(s.downloading), 800);
   };
 
-  const handleDownload = (e) => {
-    createSparkles(e);
+  const handleDownload = () => {
     const link = document.createElement('a');
     link.href = resumePDF;
-    link.download = 'Ahmed_Elsamman_Software_Engineer_Resume.pdf';
-    setTimeout(() => link.click(), 300);
+    link.download = 'Ahmed_Elsamman_Software_Engineer.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -61,7 +62,10 @@ const Resume = () => {
         <button
           style={{ margin: ' 1rem auto', width: '15rem' }}
           className={`primary ${s.downloadButton}`}
-          onClick={handleDownload}
+          onClick={(e) => {
+            createSparkles(e);
+            handleDownload();
+          }}
         >
           <DownloadIcon fill="#fff" />
           <span className={s.downloadText}> download resume</span>
