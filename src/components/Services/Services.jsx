@@ -13,19 +13,19 @@ const Services = () => {
       title: 'Frontend Development',
       icon: <FaCode className="service-icon" />,
       description: 'Creating beautiful, responsive, and interactive user interfaces using modern web technologies.',
-      skills: ['React', 'Vue.js', 'HTML/CSS', 'JavaScript']
+      skills: ['React', 'ِAngular', 'Next.js', 'HTML/CSS', 'JavaScript']
     },
     {
       title: 'Backend Development',
       icon: <FaServer className="service-icon" />,
       description: 'Building robust server-side applications and APIs to power your web applications.',
-      skills: ['Node.js', 'Python', 'RESTful APIs', 'GraphQL']
+      skills: ['Node.js', 'Nest', 'RESTful APIs', 'GraphQL ', 'Express']
     },
     {
       title: 'Full Stack Development',
       icon: <FaDatabase className="service-icon" />,
       description: 'End-to-end development combining frontend and backend expertise for complete solutions.',
-      skills: ['Full Stack Apps', 'Database Design', 'System Architecture', 'DevOps']
+      skills: ['Full Stack Apps', 'Database Design', 'System Architecture', 'DevOps','web Design']
     }
   ];
 
