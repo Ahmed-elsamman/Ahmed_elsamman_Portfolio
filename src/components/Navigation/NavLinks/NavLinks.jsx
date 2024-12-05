@@ -2,6 +2,7 @@ import { AiOutlineFundProjectionScreen } from '@react-icons/all-files/ai/AiOutli
 import { AiOutlineHome } from '@react-icons/all-files/ai/AiOutlineHome';
 import { AiOutlineUser } from '@react-icons/all-files/ai/AiOutlineUser';
 import { CgFileDocument } from '@react-icons/all-files/cg/CgFileDocument';
+import { MdOutlineDesignServices } from 'react-icons/md';
 import { useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { usePreload } from '../../../hooks/usePreload';
@@ -12,6 +13,7 @@ const scenes = {
   Home: () => import('../../../scenes/Home/Home'),
   About: () => import('../../../scenes/About/About'),
   Projects: () => import('../../../scenes/Projects/Projects'),
+  Services: () => import('../../../scenes/Services/Services'),
   Resume: () => import('../../../scenes/Resume/Resume'),
 };
 
@@ -19,6 +21,7 @@ const icons = {
   Home: <AiOutlineHome />,
   About: <AiOutlineUser />,
   Projects: <AiOutlineFundProjectionScreen />,
+  Services: <MdOutlineDesignServices />,
   Resume: <CgFileDocument />,
 };
 
