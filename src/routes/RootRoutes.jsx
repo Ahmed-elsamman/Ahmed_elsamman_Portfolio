@@ -7,6 +7,7 @@ export const routes = {
   Home: '/',
   About: '/about',
   Projects: '/projects',
+  Services: '/services',
   Project: '/project/:id',
   Resume: '/resume',
 };
@@ -15,6 +16,7 @@ const scenes = {
   Home: lazy(() => import('../scenes/Home/Home')),
   About: lazy(() => import('../scenes/About/About')),
   Projects: lazy(() => import('../scenes/Projects/Projects')),
+  Services: lazy(() => import('../scenes/Services/Services')),
   Resume: lazy(() => import('../scenes/Resume/Resume')),
 };
 
@@ -45,6 +47,10 @@ function RootRoutes() {
         <Route
           path={routes.Projects}
           element={<LazyScene name="Projects" />}
+        />
+        <Route
+          path={routes.Services}
+          element={<LazyScene name="Services" />}
         />
         <Route
           path={routes.Resume}
