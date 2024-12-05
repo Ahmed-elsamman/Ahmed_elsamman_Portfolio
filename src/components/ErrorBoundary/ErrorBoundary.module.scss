@@ -1,0 +1,37 @@
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  padding: 2rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  h2 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+  }
+
+  .retryButton {
+    padding: 0.8rem 2rem;
+    background: var(--primary);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(var(--primary-rgb), 0.3);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}
