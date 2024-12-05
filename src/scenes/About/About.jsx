@@ -9,6 +9,7 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 import Logo2 from '../../assets/logo2.1.jpg';
 import protflio1 from '../../assets/protflioWebsite/protflio1.jpg';
 import protflio2 from '../../assets/protflioWebsite/protflio5.jpg';
+import Experience from './Experience/Experience';
 
 const About = () => {
   return (
@@ -28,6 +29,11 @@ const About = () => {
             <LazyLoadImage src={protflio2} alt="about" />
           </div> */}
         </div>
+
+        <h2 className={s.skills}>
+          My <b className={s.purple}>Experience</b>
+        </h2>
+        <Experience />
 
         <h2 className={s.skills}>
           My <b className={s.purple}>Skills</b>

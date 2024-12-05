@@ -2,6 +2,7 @@
   position: fixed;
   z-index: 8;
   width: 100%;
+
   background-attachment: scroll;
   padding: 3.9px 26px;
   transition: all 0.3s ease-out 0s;
@@ -25,9 +26,18 @@
 @media (max-width: 768px) {
   .header {
     background-color: var(--bg-primary);
-    padding: 10px 20px;
+    padding: 2px 15px;
+    transform: scale(0.95);
   }
   .container {
     justify-content: space-between;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    padding: 1px 10px;
+    transform: scale(0.9);
   }
 }
