@@ -1,7 +1,6 @@
-import React, { useEffect, useState, Suspense } from 'react';
-import TagCloud from 'TagCloud';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import styles from './TechSkills.module.scss';
-import { motion } from 'framer-motion';
 import ErrorBoundary from '../../../components/ErrorBoundary/ErrorBoundary';
 import { DiGit } from '@react-icons/all-files/di/DiGit';
 import { DiJavascript1 } from '@react-icons/all-files/di/DiJavascript1';
@@ -28,22 +27,20 @@ import { SiVercel } from 'react-icons/si';
 import { SiGithub } from 'react-icons/si';
 import { SiGitlab } from 'react-icons/si';
 import { FaGitAlt } from 'react-icons/fa';
-
-
-const LoadingSpinner = () => (
-  <div className={styles.loading}>
-    <div className={styles.spinner}></div>
-  </div>
-);
-
 const TechSkills = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [cloudError, setCloudError] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [hoveredSkill, setHoveredSkill] = useState(null);
+
+  const categories = [
+    { id: 'all', name: 'All Skills' },
+    { id: 'frontend', name: 'Frontend' },
+    { id: 'backend', name: 'Backend' },
+    { id: 'tools', name: 'Tools' }
+  ];
 
   const skills = [
-
-    // ******************************
-    { icon: <SiNextDotJs />, name: 'Next.js' ,category: 'frontend'},
+    // نفس مصفوفة المهارات الموجودة مع إضافة خاصية category
+    { icon: <SiNextDotJs />, name: 'Next.js', category: 'frontend' },
     { icon: <DiReact />, name: 'React', category: 'frontend' },
     { icon: <SiAngular />, name: 'Angular', category: 'frontend' },
     { icon: <SiTypescript />, name: 'TypeScript', category: 'frontend'  },
@@ -71,105 +68,71 @@ const TechSkills = () => {
     { icon: <SiVercel />, name: 'Vercel', category: 'tools' },
   ];
 
-  useEffect(() => {
-    let cloudInstance = null;
-
-    const initializeTagCloud = async () => {
-      try {
-        const container = '.tagcloud';
-        const texts = skills.map(skill => skill.name);
-
-        const options = {
-          radius: 250,
-          maxSpeed: 'fast',
-          initSpeed: 'fast',
-          direction: 135,
-          keep: true,
-          useContainerInlineStyles: false
-        };
-
-        cloudInstance = TagCloud(container, texts, options);
-        setIsLoading(false);
-      } catch (error) {
-        console.error('Error initializing TagCloud:', error);
-        setCloudError(error);
-        setIsLoading(false);
-      }
-    };
-
-    initializeTagCloud();
-
-    return () => {
-      if (cloudInstance && typeof cloudInstance.destroy === 'function') {
-        cloudInstance.destroy();
-      }
-    };
-  }, []);
-
-  const categories = {
-    frontend: 'Frontend Development',
-    backend: 'Backend Development',
-    language: 'Programming Languages',
-    tools: 'Development Tools'
-  };
-
-  if (cloudError) {
-    return (
-      <div className={styles.errorMessage}>
-        <h3>Failed to load skills visualization</h3>
-        <button onClick={() => window.location.reload()}>Retry</button>
-      </div>
-    );
-  }
+  const filteredSkills = selectedCategory === 'all' 
+    ? skills 
+    : skills.filter(skill => skill.category === selectedCategory);
 
   return (
     <ErrorBoundary>
-      <div className={styles.skillsSection}>
-        <h2 className={styles.title}>Technical Skills</h2>
-        
-        <div className={styles.content}>
-          <Suspense fallback={<LoadingSpinner />}>
-            <div className={styles.sphereContainer}>
-              {isLoading ? (
-                <LoadingSpinner />
-              ) : (
-                <>
-                  <div className="tagcloud"></div>
-                  <div className={styles.glowOrb}></div>
-                </>
-              )}
-            </div>
-          </Suspense>
+      <div className={styles.techSkillsContainer}>
+        <motion.div 
+          className={styles.categories}
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          {categories.map(category => (
+            <motion.button
+              key={category.id}
+              className={`${styles.categoryBtn} ${selectedCategory === category.id ? styles.active : ''}`}
+              onClick={() => setSelectedCategory(category.id)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              {category.name}
+            </motion.button>
+          ))}
+        </motion.div>
 
-          {/* <div className={styles.categoriesContainer}>
-            {Object.entries(categories).map(([key, title]) => (
-              <motion.div 
-                key={key}
-                className={styles.category}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
+        <motion.div 
+          className={styles.skillsGrid}
+          layout
+        >
+          <AnimatePresence mode="wait">
+            {filteredSkills.map((skill, index) => (
+              <motion.div
+                key={skill.name}
+                className={styles.skillCard}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
+                whileHover={{ 
+                  scale: 1.05,
+                  rotateY: 10,
+                  z: 50,
+                }}
+                onHoverStart={() => setHoveredSkill(skill.name)}
+                onHoverEnd={() => setHoveredSkill(null)}
               >
-                <h3>{title}</h3>
-                <div className={styles.skillsList}>
-                  {skills
-                    .filter(skill => skill.category === key)
-                    .map((skill) => (
-                      <motion.div 
-                        key={skill.name}
-                        className={styles.skillItem}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        <span className={styles.icon}>{skill.icon}</span>
-                        <span className={styles.name}>{skill.name}</span>
-                      </motion.div>
-                    ))}
+                <div className={styles.iconWrapper}>
+                  <motion.div 
+                    className={styles.skillIcon}
+                    animate={{
+                      rotateY: hoveredSkill === skill.name ? 360 : 0
+                    }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    {skill.icon}
+                  </motion.div>
                 </div>
+                <motion.h3 className={styles.skillName}>
+                  {skill.name}
+                </motion.h3>
               </motion.div>
             ))}
-          </div> */}
-        </div>
+          </AnimatePresence>
+        </motion.div>
       </div>
     </ErrorBoundary>
   );

@@ -79,7 +79,7 @@ const data = [
     },
     links: {
       LiveSite: 'https://amazon-client-side-iti.vercel.app/',
-      Repo: 'https://github.com/tolypash/sally-pos',
+      Repo: 'https://github.com/ahmed-sabry-hindawi/Amazon-client-side',
     },
     technologies: [
       '#Next.js',
@@ -121,7 +121,7 @@ const data = [
     },
     links: {
       LiveSite: 'https://amazon-seller-dashboard.vercel.app/login',
-      Repo: 'https://github.com/tolypash/sally-pos',
+      Repo: 'https://github.com/Ahmed-elsamman/Amazon-Dashboard-Angular-ITI',
     },
     technologies: [
       '#React',
@@ -168,7 +168,7 @@ const data = [
     },
     links: {
       LiveSite: 'https://amazon-admin-dashboard.vercel.app/login',
-      Repo: 'https://github.com/tolypash/sally-pos',
+      Repo: 'https://github.com/Ahmed-elsamman/Amazon-Dashboard-Angular-ITI',
     },
     technologies: [
       '#Angular',

@@ -34,73 +34,74 @@ const ModalProjectCard = () => {
     <Modal show={isVisible} onClose={toggleModal}>
       <div className={s.modalContent}>
         <div className={s.cardWrapper}>
-          <div className={s.swiperContainer}>
-            <Swiper
-              modules={[Autoplay, Pagination, Navigation, EffectFade]}
-              effect="fade"
-              spaceBetween={30}
-              centeredSlides={true}
-              autoplay={{
-                delay: 3000,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-              }}
-              pagination={{
-                clickable: true,
-                dynamicBullets: true,
-              }}
-              navigation={true}
-              className={s.swiper}
-            >
-              {image.src.map((img, index) => (
-                <SwiperSlide key={index}>
-                  <LazyLoadImage
-                    alt={`project-img-${index}`}
-                    src={img}
-                    effect="blur"
-                    width="100%"
-                    height="100%"
-                    className={s.slideImage}
-                    placeholderSrc={image.placeholderSrc}
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-
-          <div className={s.cardBody}>
+          <div className={s.cardHeader}>
             <h3 className={s.title}>{title}</h3>
-            <p className={s.description}>{description}</p>
-
-            <div className={s.technologies}>
-              {technologies.map((tech, index) => (
-                <span key={index}>{tech}</span>
-              ))}
+            <div className={s.buttonGroup}>
+              {links.LiveSite && (
+                <Button
+                  className="primary"
+                  href={links.LiveSite}
+                  target="_blank"
+                >
+                  <BiLinkExternal /> &nbsp; Live Site
+                </Button>
+              )}
+              {links.Repo && (
+                <Button
+                  className="primary"
+                  href={links.Repo}
+                  target="_blank"
+                >
+                  <BiLinkExternal /> &nbsp; Github
+                </Button>
+              )}
             </div>
           </div>
 
-          <div className={s.cardFooter}>
-            {links.LiveSite && (
-              <Button
-                style={{ width: '12rem' }}
-                className="primary"
-                href={links.LiveSite}
-                target="_blank"
+          <div className={s.contentContainer}>
+            <div className={s.swiperContainer}>
+              <Swiper
+                modules={[Autoplay, Pagination, Navigation, EffectFade]}
+                effect="fade"
+                spaceBetween={30}
+                centeredSlides={true}
+                autoplay={{
+                  delay: 3000,
+                  disableOnInteraction: false,
+                  pauseOnMouseEnter: true,
+                }}
+                pagination={{
+                  clickable: true,
+                  dynamicBullets: true,
+                }}
+                navigation={true}
+                className={s.swiper}
               >
-                <BiLinkExternal /> &nbsp; Live Site
-              </Button>
-            )}
+                {image.src.map((img, index) => (
+                  <SwiperSlide key={index}>
+                    <LazyLoadImage
+                      alt={`project-img-${index}`}
+                      src={img}
+                      effect="blur"
+                      className={s.slideImage}
+                      placeholderSrc={image.placeholderSrc}
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
 
-            {links.Repo && (
-              <Button
-                style={{ width: '12rem' }}
-                className="primary"
-                href={links.Repo}
-                target="_blank"
-              >
-                <BiLinkExternal /> &nbsp; GitHub
-              </Button>
-            )}
+            <div className={s.projectInfo}>
+              <div className={s.description}>{description}</div>
+              <div className={s.technologies}>
+                <h4>Technologies Used:</h4>
+                <div className={s.techList}>
+                  {technologies.map((tech, index) => (
+                    <span key={index}>{tech}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

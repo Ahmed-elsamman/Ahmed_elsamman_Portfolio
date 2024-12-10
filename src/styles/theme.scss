@@ -32,6 +32,13 @@
   --technologies: #000;
   --tags-txt: #000;
   --toggle-theme: #000;
+
+
+  --primary-rgb: 255, 152, 0;    /* برتقالي */
+  --accent-rgb: 255, 193, 7;     /* أصفر */
+  --primary: rgb(var(--primary-rgb));
+  --accent: rgb(var(--accent-rgb));
+  --card-bg: rgba(255, 255, 255, 0.45);
 }
 
 .dark {
@@ -65,4 +72,10 @@
   --technologies: #000;
   --tags-txt: #000;
   --toggle-theme: #fff;
+
+  --primary-rgb: 255, 152, 0;    /* برتقالي */
+  --accent-rgb: 255, 193, 7;     /* أصفر */
+  --primary: rgb(var(--primary-rgb));
+  --accent: rgb(var(--accent-rgb));
+  --card-bg: rgba(255, 255, 255, 0.05);
 }
