@@ -94,6 +94,7 @@
 }
 
 .services-container {
+  perspective: 1000px;
   padding: 4rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -137,18 +138,23 @@
   }
 
   .service-card {
+    transform-style: preserve-3d;
     height: 100%;
     min-height: 450px;
     display: flex;
     flex-direction: column;
-    background: var(--card-bg, rgba(255, 255, 255, 0.05));
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 20px;
     padding: 2rem;
     position: relative;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-
+    box-shadow: 
+      0 15px 35px rgba(0, 0, 0, 0.2),
+      0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    
     &::before {
       content: '';
       position: absolute;
@@ -177,6 +183,7 @@
       justify-content: center;
       margin: 0 auto 1.5rem;
       transition: transform 0.3s ease;
+      transform: translateZ(30px);
 
       .service-icon {
         font-size: 1.8rem;
@@ -189,6 +196,8 @@
       margin-bottom: 1rem;
       color: var(--primary-text);
       text-align: center;
+      transform: translateZ(20px);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     }
 
     p {
@@ -207,17 +216,22 @@
       margin-bottom: 1.5rem;
 
       .skill-tag {
-        background: rgba(var(--primary-rgb), 0.1);
+        background: rgba(var(--primary-rgb), 0.15);
         color: var(--primary);
         padding: 0.5rem 1rem;
         border-radius: 20px;
         font-size: 0.9rem;
         transition: all 0.3s ease;
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transform: translateZ(15px);
 
         &:hover {
           background: var(--primary);
           color: white;
           transform: scale(1.05);
+          transform: translateZ(25px) scale(1.1);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
       }
     }
@@ -228,22 +242,33 @@
       border: 2px solid var(--primary);
       border-radius: 10px;
       background: transparent;
-      color: var(--primary);
+      color: var(--toggle-theme);
       font-weight: 600;
       transition: all 0.3s ease;
       cursor: pointer;
       margin-top: auto;
-
+      transform: translateZ(25px);
+      background: linear-gradient(135deg,
+        rgba(var(--primary-rgb), 0.8),
+        rgba(var(--accent-rgb), 0.8)
+      );
+      border: none;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      
       &:hover {
         background: var(--primary);
         color: white;
         transform: translateY(-2px);
+        transform: translateZ(35px) translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
       }
     }
   }
 }
 
 .connect-platforms {
+  transform-style: preserve-3d;
+  perspective: 1000px;
   text-align: center;
   padding: 2rem;
   margin-top: 2rem;
@@ -272,6 +297,8 @@
     flex-wrap: wrap;
 
     .platform-link {
+      transform-style: preserve-3d;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
       display: flex;
       align-items: center;
       gap: 1rem;
@@ -281,7 +308,6 @@
       border: 1px solid rgba(255, 255, 255, 0.2);
       text-decoration: none;
       color: var(--primary-text);
-      transition: all 0.3s ease;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
       img {
@@ -289,25 +315,42 @@
         height: 40px;
         object-fit: contain;
         border-radius: 8px;
+        transform: translateZ(20px);
       }
 
       span {
         font-size: 1.1rem;
         font-weight: 500;
         color: #fff;
+        transform: translateZ(15px);
       }
 
       &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        transform: translateY(-5px) rotateX(10deg) rotateY(10deg);
+        
+        img {
+          transform: translateZ(20px);
+        }
+        
+        span {
+          transform: translateZ(15px);
+        }
       }
 
-      &.khamsat {
-        background: linear-gradient(135deg, rgba(37, 197, 160, 0.1), rgba(37, 197, 160, 0.2));
+      &.nafezly {
+        background: linear-gradient(135deg, rgba(37, 109, 197, 0.1), rgba(37, 138, 197, 0.2));
         border-color: rgba(37, 197, 160, 0.3);
         
         &:hover {
           background: linear-gradient(135deg, rgba(37, 197, 160, 0.2), rgba(37, 197, 160, 0.3));
+        }
+      }
+      &.khamsat {
+        background: linear-gradient(135deg, rgba(197, 184, 37, 0.1), rgba(197, 144, 37, 0.2));
+        border-color: rgba(37, 197, 160, 0.3);
+        
+        &:hover {
+          background: linear-gradient(135deg, rgba(197, 144, 37, 0.2), rgba(197, 144, 37, 0.3));
         }
       }
 

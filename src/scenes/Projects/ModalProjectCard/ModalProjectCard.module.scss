@@ -1,147 +1,125 @@
 .modalContent {
-  max-height: 85vh;
+  max-height: 90vh;
   overflow-y: auto;
   margin: 1rem;
-  padding: 1.5rem;
+  padding: 2rem;
   
   @media (max-width: 768px) {
-    margin: 0.75rem;
     padding: 1rem;
-    max-height: 80vh;
-  }
-  
-  @media (max-width: 576px) {
-    margin: 0.5rem;
-    padding: 0.75rem;
-    max-height: 85vh;
   }
 }
 
 .cardWrapper {
-  padding: 1rem;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
-  
-  @media (max-width: 768px) {
-    padding: 0.75rem;
-  }
-  
-  @media (max-width: 576px) {
-    padding: 0.5rem;
-  }
+  background: var(--bg-secondary);
+  border-radius: 15px;
+  overflow: hidden;
 }
 
-.swiperContainer {
-  margin-bottom: 2rem;
-  max-height: 45vh;
+.cardHeader {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid rgba(var(--primary-rgb), 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
   
   @media (max-width: 768px) {
-    margin-bottom: 1.5rem;
-    max-height: 35vh;
-  }
-  
-  @media (max-width: 576px) {
-    margin-bottom: 1rem;
-    max-height: 30vh;
-  }
-}
-
-.cardBody {
-  padding: 1.5rem;
-  
-  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
     padding: 1rem;
-  }
-  
-  @media (max-width: 576px) {
-    padding: 0.75rem;
   }
 }
 
 .title {
-  margin-bottom: 1.5rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
-  background: linear-gradient(120deg, var(--primary-color), var(--txt-secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  
-  @media (max-width: 768px) {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  @media (max-width: 576px) {
-    font-size: 1.5rem;
-    margin-bottom: 0.75rem;
-  }
-}
-
-.description {
-  margin-bottom: 1.5rem;
   color: var(--txt-secondary);
-  line-height: 1.8;
-  font-size: 1.1rem;
+  margin: 0;
   
   @media (max-width: 768px) {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-  }
-  
-  @media (max-width: 576px) {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
   }
 }
 
-.technologies {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.75rem;
-  margin: 1.5rem 0;
-  padding: 0 0.5rem;
-  
-  span {
-    background: rgba(var(--primary-rgb), 0.1);
-    color: var(--primary-color);
-    padding: 0.8rem 1.5rem;
-    border-radius: 30px;
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    
-    @media (max-width: 768px) {
-      padding: 0.6rem 1.2rem;
-      font-size: 0.9rem;
-    }
-    
-    @media (max-width: 576px) {
-      padding: 0.5rem 1rem;
-      font-size: 0.8rem;
-      border-radius: 20px;
-    }
-    
-    &:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(var(--primary-rgb), 0.3);
-    }
-  }
-}
-
-.cardFooter {
+.buttonGroup {
   display: flex;
   gap: 1rem;
-  margin-top: 1.5rem;
   
   @media (max-width: 576px) {
     flex-direction: column;
-    gap: 0.75rem;
     width: 100%;
-    padding: 0 0.5rem;
-    margin-top: 1rem;
+  }
+}
+
+.contentContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+}
+
+.swiperContainer {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(var(--primary-rgb), 0.1);
+}
+
+.slideImage {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  
+  @media (max-width: 768px) {
+    height: 300px;
+  }
+}
+
+.projectInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--txt);
+  text-align: justify;
+}
+
+.technologies {
+  h4 {
+    color: var(--txt-secondary);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+}
+
+.techList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  
+  span {
+    background: rgba(var(--primary-rgb), 0.1);
+    color: var(--txt-secondary);
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(var(--primary-rgb), 0.2);
+    }
   }
 }
 

@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import ServiceModal from './ServiceModal/ServiceModal';
 import khamsat from '../../../src/assets/freelancePlatform/khamsat.png';
 import mostaqel from '../../../src/assets/freelancePlatform/mostaqel.png';
+import nafezly from '../../../src/assets/freelancePlatform/nafezly.jpg';
 
 const Services = () => {
   const [selectedService, setSelectedService] = useState(null);
@@ -129,6 +130,17 @@ const Services = () => {
       >
         <h3 className="connect-header ">Connect With Me On Freelance Platforms</h3>
         <div className="platform-links">
+          <motion.a 
+            href="https://nafezly.com/u/ahmed_elsamman"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="platform-link nafezly"
+          >
+            <img src={nafezly} alt="Nafezly" />
+            <span>Nafezly Profile</span>
+          </motion.a>
           <motion.a 
             href="https://khamsat.com/user/ahmed_elsamman"
             target="_blank"

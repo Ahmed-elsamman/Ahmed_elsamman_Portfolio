@@ -21,6 +21,7 @@
     "react-parallax-tilt": "^1.5.22",
     "react-pdf": "^9.1.1",
     "react-router-dom": "^6.3.0",
+    "react-scroll-parallax": "^3.4.5",
     "react-spring": "^9.7.4",
     "react-tagcloud": "^2.3.3",
     "react-tilty": "^2.0.3",
