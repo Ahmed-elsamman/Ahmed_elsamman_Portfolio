@@ -10,6 +10,8 @@
   text-align: left;
   align-self: center;
   gap: 2rem;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .header {
@@ -101,7 +103,7 @@
   }
   50% {
     filter: brightness(1.1) contrast(1.1);
-    transform: translateY(-10px);
+    transform: translateY(-18px);
   }
   100% {
     filter: brightness(1) contrast(1);
