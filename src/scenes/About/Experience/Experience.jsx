@@ -3,6 +3,30 @@ import styles from './Experience.module.scss';
 const Experience = () => {
   const experiences = [
     {
+      title: 'Frontend Developer',
+      company: 'Ayen, Remote, Riyadh',
+      period: 'Nov 2024 – present',
+      achievements: [
+        'Built and optimized modular Angular 15+ UI components achieving 100% mobile-first compliance.',
+        'Improved page-load speed by 40% using lazy loading, code splitting, and image optimization techniques.',
+        'Integrated RESTful APIs, reducing response latency by 30% while ensuring robust error handling.',
+        'Collaborated in Agile sprints with backend and UX teams via Jira and Slack, delivering features on schedule.',
+        'Conducted code reviews and enforced ESLint/Prettier standards, decreasing bugs by 20% and improving code quality.',
+      ],
+    },
+    {
+      title: 'Teaching Assistant',
+      company: 'Information Technology Institute (ITI), Qena',
+      period: 'Jan 2025 – present',
+      achievements: [
+        'Delivered technical sessions on Angular, React, TypeScript, and JavaScript (ES6+) for MEARN Stack trainees.',
+        'Mentored over 30 students through hands-on projects, emphasizing component architecture and API integration.',
+        'Evaluated and refactored student code for scalability and performance, boosting project success rate by 35%.',
+        'Introduced Agile Scrum practices and Git workflows, enhancing team collaboration and delivery efficiency.',
+        'Provided continuous feedback on UI/UX implementation, ensuring alignment with design specifications.',
+      ],
+    },
+    {
       title: 'Full Stack JavaScript Developer',
       company: 'Freelancer',
       period: 'Nov 2024 – present',
@@ -14,26 +38,15 @@ const Experience = () => {
       ],
     },
     {
-      title: 'MEARN Stack Web Development',
-      company: 'ITI',
-      period: 'May 2024 – Nov 2024',
-      description:
-        'ITI scholarship provided by Ministry of Communications and Information Technology.',
-      achievements: [
-        'Engineered full-stack applications utilizing MongoDB, Express.js, node.js, Nest, React, Angular and Next.js',
-        'Collaborated with 5-member team using Agile methodologies',
-        'Created RESTful APIs serving 1000+ requests per minute',
-        'Developed responsive interfaces increasing mobile user engagement by 30%',
-        'Maintained version control standards using Git and GitHub',
-      ],
-    },
-    {
       title: 'Odoo Developer',
       company: 'Sys Gates',
       period: 'Sep 2023 – May 2024',
       achievements: [
-        'Engineered custom Odoo modules enhancing business process automation',
-        'Optimized existing modules improving system performance by 30%',
+        'Extended and optimized ERP modules using Python (Odoo Framework), increasing operational efficiency by 25%.',
+        'Refactored legacy OOP modules to improve maintainability and reduce errors by 15%.',
+        'Collaborated with cross-functional teams to deliver customized business solutions within project timelines.',
+        'Implemented automated testing scripts, enhancing reliability of critical business processes.',
+        'Provided technical documentation and training for end-users, facilitating smoother adoption.',
       ],
     },
     {
