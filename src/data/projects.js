@@ -1,4 +1,8 @@
 import logo from '../assets/logo2.1.jpg';
+import Booking1 from '../assets/Booking1.png';
+import darbproduction1 from '../assets/darbproduction1.png';
+import smar1 from '../assets/smar1.png';
+import darbprint1 from '../assets/darbprint1.png';
 import amazon1 from '../assets/amazonClient/amazon1.jpg';
 import amazon2 from '../assets/amazonClient/amazon2.jpg';
 import amazon3 from '../assets/amazonClient/amazon3.jpg';
@@ -52,6 +56,138 @@ import protflio10 from '../assets/protflioWebsite/protflio10.jpg';
 
 const data = [
   {
+    id: '7',
+    title: 'Booking Website Clone',
+
+    description:
+      "A modern travel booking web application inspired by leading reservation platforms. The system enables users to search, filter, and book flights and travel services through a seamless, high-performance Angular frontend architecture",
+
+    image: {
+      src: [
+        Booking1,
+      ],
+
+      placeholderSrc:
+        'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzIDIiPjwvc3ZnPg==',
+    },
+    links: {
+      LiveSite: 'https://booking-mearn-front.vercel.app/attractions',
+    },
+    technologies: [
+      '#Angular',
+      '#Type Script',
+      '#Reactive Forms',
+      '#Tailwind CSS',
+      '#Lazy Loading',
+      '#Route Guards',
+      '#Angualr Material',
+      '#Responsive Web Design',
+      '#Next-Auth',
+      '#NestJS',
+      '#MongoDB',
+      '#RESTful APIs',
+      '#i18next',
+    ],
+  },
+  {
+    id: '9',
+    title: 'smar-ch Website ',
+
+    description:
+      "A professional web application designed for seamless chalet reservation and property management, delivering a smooth user experience for both customers and property owners.Smar-Ch is a scalable Angular-based booking system that allows users to browse available chalets, check availability in real time, and complete reservations through a structured booking workflow.The platform also supports administrative management for properties, pricing, and bookings.",
+
+    image: {
+      src: [
+        smar1,
+
+      ],
+
+      placeholderSrc:
+        'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzIDIiPjwvc3ZnPg==',
+    },
+    links: {
+      LiveSite: 'https://smar-ch.com/',
+    },
+    technologies: [
+        '#Angular',
+      '#Type Script',
+      '#Reactive Forms',
+      '#Tailwind CSS',
+      '#Lazy Loading',
+      '#Route Guards',
+      '#Angualr Material',
+      '#Responsive Web Design',
+      '#Next-Auth',
+      '#NestJS',
+      '#MongoDB',
+      '#RESTful APIs',
+    ],
+  },
+  {
+    id: '10',
+    title: 'DarbPrint – Saudi E-Commerce Platform',
+
+    description:
+      "production-ready e-commerce web application tailored for the Saudi market, enabling users to browse and purchase products with transactions processed in Saudi Riyal (SAR).DarbPrint is a scalable Angular-based online store designed with localization, performance, and secure checkout flows in mind.The platform delivers a structured shopping experience optimized for Arabic users and regional payment workflows.",
+    image: {
+      src: [
+        darbprint1,
+      ],
+
+      placeholderSrc:
+        'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzIDIiPjwvc3ZnPg==',
+    },
+    links: {
+      LiveSite: 'https://www.darbprint.com/ar/sa',
+    },
+    technologies: [
+      '#Angular',
+      '#Type Script',
+      '#Reactive Forms',
+      '#Tailwind CSS',
+      '#Lazy Loading',
+      '#Route Guards',
+      '#Angualr Material',
+      '#Responsive Web Design',
+      '#Next-Auth',
+      '#NestJS',
+      '#MongoDB',
+      '#RESTful APIs',
+    ],
+  },
+  {
+    id: '11',
+    title: 'Darb Productions – Corporate Landing Page',
+
+    description:
+      "A modern, high-performance landing page developed for a media production company, designed to showcase services, portfolio, and brand identity with a strong visual impact.Darb Productions website is a professionally structured Angular landing page focused on brand storytelling, service presentation, and lead generation.The goal was to create a visually engaging, fast-loading, and conversion-oriented user experience.",
+    image: {
+      src: [
+        darbproduction1,
+      ],
+
+      placeholderSrc:
+        'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzIDIiPjwvc3ZnPg==',
+    },
+    links: {
+      LiveSite: 'https://www.darbproductions.com/',
+    },
+    technologies: [
+      '#Angular',
+      '#Type Script',
+      '#Reactive Forms',
+      '#Tailwind CSS',
+      '#Lazy Loading',
+      '#Route Guards',
+      '#Angualr Material',
+      '#Responsive Web Design',
+      '#Next-Auth',
+      '#NestJS',
+      '#MongoDB',
+      '#RESTful APIs',
+    ],
+  },
+  {
     id: '1',
     title: 'Amazon Website Clone',
 
@@ -82,8 +218,6 @@ const data = [
       Repo: 'https://github.com/ahmed-sabry-hindawi/Amazon-client-side',
     },
     technologies: [
-      '#Next.js',
-      '#React',
       '#Angular',
       '#TypeScript',
       '#JavaScript',
