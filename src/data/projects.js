@@ -1,5 +1,6 @@
 import logo from '../assets/logo2.1.jpg';
 import Booking1 from '../assets/Booking1.png';
+import udemy from '../assets/udemy.png';
 import darbproduction1 from '../assets/darbproduction1.png';
 import smar1 from '../assets/smar1.png';
 import darbprint1 from '../assets/darbprint1.png';
@@ -55,6 +56,36 @@ import protflio9 from '../assets/protflioWebsite/protflio9.jpg';
 import protflio10 from '../assets/protflioWebsite/protflio10.jpg';
 
 const data = [
+  {
+    id: '15',
+    title: 'Udemy Website Clone – Online Learning Platform',
+
+    description:
+      "A feature-rich e-learning web application inspired by modern course marketplaces, built with a scalable Angular frontend architecture focused on performance and user experience.An online course platform that allows users to browse courses, enroll, track progress, and manage learning content through an interactive and responsive interface.The system simulates a real-world learning marketplace with authentication, course filtering, and structured learning flow.",
+
+    image: {
+      src: [
+       udemy ,
+      ],
+
+      placeholderSrc:
+        'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzIDIiPjwvc3ZnPg==',
+    },
+    links: {
+      LiveSite: 'https://udemy-next-gamma.vercel.app/',
+    },
+    technologies: [
+      '#Angular',
+      '#Type Script',
+      '#Reactive Forms',
+      '#Tailwind CSS',
+      '#Lazy Loading',
+      '#Route Guards',
+      '#Angualr Material',
+      '#Responsive Web Design',
+
+    ],
+  },
   {
     id: '7',
     title: 'Booking Website Clone',
