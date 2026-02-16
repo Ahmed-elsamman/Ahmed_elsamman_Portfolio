@@ -56,7 +56,143 @@ import protflio9 from '../assets/protflioWebsite/protflio9.jpg';
 import protflio10 from '../assets/protflioWebsite/protflio10.jpg';
 
 const data = [
+
   {
+    id: '1',
+    title: 'Amazon Website Clone',
+
+    description:
+      "A cutting-edge e-commerce platform that meticulously replicates Amazon's functionality and user experience. Built with a powerful tech stack including React, Next.js, Angular, and Nest.js, this full-stack application features seamless user authentication, real-time inventory tracking, and advanced search capabilities. The platform incorporates sophisticated payment processing, multi-language support, and dynamic product recommendations. Enhanced with Redux Toolkit for state management and optimized with server-side rendering for superior performance and SEO.",
+
+    image: {
+      src: [
+        amazon1,
+        amazon2,
+        amazon3,
+        amazon4,
+        amazon5,
+        amazon6,
+        amazon7,
+        amazon8,
+        amazon9,
+        amazon10,
+        amazon11,
+        amazon12,
+      ],
+
+      placeholderSrc:
+        'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzIDIiPjwvc3ZnPg==',
+    },
+    links: {
+      LiveSite: 'https://amazon-client-side-iti.vercel.app/',
+      Repo: 'https://github.com/ahmed-sabry-hindawi/Amazon-client-side',
+    },
+    technologies: [
+      '#Angular',
+      '#TypeScript',
+      '#JavaScript',
+      '#Tailwind CSS',
+      '#Material-UI',
+      '#Redux',
+      '#Axios',
+      '#Responsive Web Design',
+      '#Next-Auth',
+      '#NestJS',
+      '#MongoDB',
+      '#RESTful APIs',
+      '#i18next',
+    ],
+  },
+  {
+    id: '2',
+    title: 'Amazon Seller Dashboard',
+    description:
+      'An enterprise-grade seller management platform that empowers vendors with comprehensive tools for e-commerce success. This sophisticated dashboard provides real-time inventory tracking, advanced analytics with customizable KPIs, and automated pricing optimization algorithms. Features include bulk product management, automated order fulfillment, competitive price monitoring, and detailed sales forecasting. The system integrates seamlessly with multiple payment gateways and shipping providers, while offering detailed performance metrics and revenue analytics.',
+
+    image: {
+      src: [
+        seller2,
+        seller1,
+        seller3,
+        seller4,
+        seller5,
+        seller6,
+        seller7,
+        seller8,
+      ],
+
+      placeholderSrc: logo,
+    },
+    links: {
+      LiveSite: 'https://amazon-seller-dashboard.vercel.app/login',
+      Repo: 'https://github.com/Ahmed-elsamman/Amazon-Dashboard-Angular-ITI',
+    },
+    technologies: [
+      '#React',
+      '#JavaScript',
+      '#Tailwind CSS',
+      '#Material-UI',
+      '#Redux',
+      '#Axios',
+      '#Responsive Web Design',
+      '#NestJS',
+      '#MongoDB',
+      '#RESTful APIs',
+      '#i18next',
+    ],
+  },
+  {
+    id: '3',
+    title: 'Amazon Admin Dashboard',
+    description:
+      'A robust and scalable administrative control center built for enterprise-level e-commerce management. This comprehensive system features advanced user management with role-based access control, sophisticated vendor verification workflows, and real-time analytics dashboards. Includes automated fraud detection, inventory forecasting, and advanced reporting tools. The platform offers seamless integration with AWS services Enhanced with Socket.io for real-time updates and Redis for optimal caching performance.',
+
+    image: {
+      src: [
+        admin2,
+        admin1,
+        admin3,
+        admin4,
+        admin5,
+        admin6,
+        admin7,
+        admin8,
+        admin9,
+        admin10,
+        admin11,
+        admin12,
+        admin13,
+        admin14,
+        admin15,
+        admin16,
+        admin17,
+      ],
+
+      placeholderSrc: logo,
+    },
+    links: {
+      LiveSite: 'https://amazon-admin-dashboard.vercel.app/login',
+      Repo: 'https://github.com/Ahmed-elsamman/Amazon-Dashboard-Angular-ITI',
+    },
+    technologies: [
+      '#Angular',
+      '#Material Angular',
+      '#TypeScript',
+      '#Redis',
+      '#NgRx',
+      '#RxJS',
+      '#Chart.js',
+      '#Responsive Design',
+      '#JWT Auth',
+      '#Socket.io',
+      '#AWS Services',
+      '#NestJS',
+      '#MongoDB',
+      '#RESTful APIs',
+      '#i18next',
+    ],
+  },
+    {
     id: '15',
     title: 'Udemy Website Clone – Online Learning Platform',
 
@@ -216,141 +352,6 @@ const data = [
       '#NestJS',
       '#MongoDB',
       '#RESTful APIs',
-    ],
-  },
-  {
-    id: '1',
-    title: 'Amazon Website Clone',
-
-    description:
-      "A cutting-edge e-commerce platform that meticulously replicates Amazon's functionality and user experience. Built with a powerful tech stack including React, Next.js, Angular, and Nest.js, this full-stack application features seamless user authentication, real-time inventory tracking, and advanced search capabilities. The platform incorporates sophisticated payment processing, multi-language support, and dynamic product recommendations. Enhanced with Redux Toolkit for state management and optimized with server-side rendering for superior performance and SEO.",
-
-    image: {
-      src: [
-        amazon1,
-        amazon2,
-        amazon3,
-        amazon4,
-        amazon5,
-        amazon6,
-        amazon7,
-        amazon8,
-        amazon9,
-        amazon10,
-        amazon11,
-        amazon12,
-      ],
-
-      placeholderSrc:
-        'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzIDIiPjwvc3ZnPg==',
-    },
-    links: {
-      LiveSite: 'https://amazon-client-side-iti.vercel.app/',
-      Repo: 'https://github.com/ahmed-sabry-hindawi/Amazon-client-side',
-    },
-    technologies: [
-      '#Angular',
-      '#TypeScript',
-      '#JavaScript',
-      '#Tailwind CSS',
-      '#Material-UI',
-      '#Redux',
-      '#Axios',
-      '#Responsive Web Design',
-      '#Next-Auth',
-      '#NestJS',
-      '#MongoDB',
-      '#RESTful APIs',
-      '#i18next',
-    ],
-  },
-  {
-    id: '2',
-    title: 'Amazon Seller Dashboard',
-    description:
-      'An enterprise-grade seller management platform that empowers vendors with comprehensive tools for e-commerce success. This sophisticated dashboard provides real-time inventory tracking, advanced analytics with customizable KPIs, and automated pricing optimization algorithms. Features include bulk product management, automated order fulfillment, competitive price monitoring, and detailed sales forecasting. The system integrates seamlessly with multiple payment gateways and shipping providers, while offering detailed performance metrics and revenue analytics.',
-
-    image: {
-      src: [
-        seller2,
-        seller1,
-        seller3,
-        seller4,
-        seller5,
-        seller6,
-        seller7,
-        seller8,
-      ],
-
-      placeholderSrc: logo,
-    },
-    links: {
-      LiveSite: 'https://amazon-seller-dashboard.vercel.app/login',
-      Repo: 'https://github.com/Ahmed-elsamman/Amazon-Dashboard-Angular-ITI',
-    },
-    technologies: [
-      '#React',
-      '#JavaScript',
-      '#Tailwind CSS',
-      '#Material-UI',
-      '#Redux',
-      '#Axios',
-      '#Responsive Web Design',
-      '#NestJS',
-      '#MongoDB',
-      '#RESTful APIs',
-      '#i18next',
-    ],
-  },
-  {
-    id: '3',
-    title: 'Amazon Admin Dashboard',
-    description:
-      'A robust and scalable administrative control center built for enterprise-level e-commerce management. This comprehensive system features advanced user management with role-based access control, sophisticated vendor verification workflows, and real-time analytics dashboards. Includes automated fraud detection, inventory forecasting, and advanced reporting tools. The platform offers seamless integration with AWS services Enhanced with Socket.io for real-time updates and Redis for optimal caching performance.',
-
-    image: {
-      src: [
-        admin2,
-        admin1,
-        admin3,
-        admin4,
-        admin5,
-        admin6,
-        admin7,
-        admin8,
-        admin9,
-        admin10,
-        admin11,
-        admin12,
-        admin13,
-        admin14,
-        admin15,
-        admin16,
-        admin17,
-      ],
-
-      placeholderSrc: logo,
-    },
-    links: {
-      LiveSite: 'https://amazon-admin-dashboard.vercel.app/login',
-      Repo: 'https://github.com/Ahmed-elsamman/Amazon-Dashboard-Angular-ITI',
-    },
-    technologies: [
-      '#Angular',
-      '#Material Angular',
-      '#TypeScript',
-      '#Redis',
-      '#NgRx',
-      '#RxJS',
-      '#Chart.js',
-      '#Responsive Design',
-      '#JWT Auth',
-      '#Socket.io',
-      '#AWS Services',
-      '#NestJS',
-      '#MongoDB',
-      '#RESTful APIs',
-      '#i18next',
     ],
   },
   {
